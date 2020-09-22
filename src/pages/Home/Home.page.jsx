@@ -3,12 +3,20 @@ import { Title, Subtitle } from './Home.styled';
 import youtube from '../../utils/youtube';
 
 const Home = () => {
-  const response = youtube.get('/search', {
-    params: {
-      q: 'cats',
-    },
-  });
-  console.log(response);
+  const getSearchResults = async () => {
+    try {
+      const response = await youtube.get('/search', {
+        params: {
+          q: 'cats',
+        },
+      });
+      console.log(response.data.items);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  getSearchResults();
 
   return (
     <main>
