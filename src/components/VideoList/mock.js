@@ -11,6 +11,9 @@ const mockVideos = [
         default: {
           url: 'https://i.ytimg.com/vi/hY7m5jjJ9mM/default.jpg',
         },
+        medium: {
+          url: 'https://i.ytimg.com/vi/hY7m5jjJ9mM/mqdefault.jpg',
+        },
       },
     },
   },
@@ -25,6 +28,9 @@ const mockVideos = [
       thumbnails: {
         default: {
           url: 'https://i.ytimg.com/vi/ByH9LuSILxU/default.jpg',
+        },
+        medium: {
+          url: 'https://i.ytimg.com/vi/ByH9LuSILxU/mqdefault.jpg',
         },
       },
     },
@@ -41,6 +47,9 @@ const mockVideos = [
         default: {
           url: 'https://i.ytimg.com/vi/DXUAyRRkI6k/default.jpg',
         },
+        medium: {
+          url: 'https://i.ytimg.com/vi/DXUAyRRkI6k/mqdefault.jpg',
+        },
       },
     },
   },
@@ -55,6 +64,9 @@ const mockVideos = [
       thumbnails: {
         default: {
           url: 'https://i.ytimg.com/vi/BwSQyuUxYfI/default.jpg',
+        },
+        medium: {
+          url: 'https://i.ytimg.com/vi/BwSQyuUxYfI/mqdefault.jpg',
         },
       },
     },

@@ -8,6 +8,7 @@ const Card = styled.div`
   height: 320px;
   border: 1px solid grey;
   overflow-y: hidden;
+  margin: 15px;
 `;
 
 const Thumbnail = styled.img`

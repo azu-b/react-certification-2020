@@ -6,4 +6,4 @@ const Container = styled.div`
   justify-content: flex-start;
 `;
 
-export default { Container };
+export { Container };
