@@ -7,7 +7,7 @@ const Container = styled.div`
 
 const Item = styled.div`
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   height: 90px;
 `;
 
