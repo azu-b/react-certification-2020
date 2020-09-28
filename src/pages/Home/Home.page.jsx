@@ -1,6 +1,8 @@
 import React from 'react';
 import { Title, Subtitle } from './Home.styled';
 import Video from '../../components/Video';
+import VideoList from '../../components/VideoList';
+import mockVideos from '../../components/VideoList/mock';
 // import youtube from '../../utils/youtube';
 
 const Home = () => {
@@ -28,6 +30,7 @@ const Home = () => {
         title="CATS will make you LAUGH YOUR HEAD OFF - Funny CAT compilation"
         description="Cats are amazing creatures because they make us laugh all the time! Watching funny cats is the hardest try not to laugh challenge! Just look how all these cats ..."
       />
+      <VideoList videos={mockVideos} />
     </main>
   );
 };
