@@ -26,7 +26,8 @@ const Home = () => {
 
   return (
     <Container>
-      <Title>Welcome to Azu&apos;s React Certification Challenge 2020</Title>
+      {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
+      <Title>🚧 Work in progress: Azu&apos;s React Certification Challenge</Title>
       <SearchResults videos={mockVideos} />
     </Container>
   );
