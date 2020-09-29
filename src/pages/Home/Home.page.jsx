@@ -1,7 +1,6 @@
 import React from 'react';
-import { Title, Subtitle } from './Home.styled';
-import SearchResults from '../../components/SearchResults';
-import mockVideos from '../../components/VideoList/mock';
+import Navbar from '../../components/Navbar';
+// import { Title, Subtitle } from './Home.styled';
 // import youtube from '../../utils/youtube';
 
 const Home = () => {
@@ -20,13 +19,7 @@ const Home = () => {
 
   // getSearchResults();
 
-  return (
-    <main>
-      <Title>React Certification 2020</Title>
-      <Subtitle>Welcome to Azu&apos;s challenge</Subtitle>
-      <SearchResults videos={mockVideos} />
-    </main>
-  );
+  return <Navbar />;
 };
 
 export default Home;
