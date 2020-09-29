@@ -1,17 +1,16 @@
 import styled from 'styled-components';
 
-const Title = styled.h1`
-  font-size: 40px;
-  color: grey;
-`;
-
-const Subtitle = styled.h4`
-  font-size: 16px;
-  color: black;
-`;
-
 const Container = styled.main`
-  margin-top: 50px;
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
 `;
 
-export { Title, Subtitle, Container };
+const Title = styled.h1`
+  font-family: 'Folks Normal';
+  font-size: 32px;
+  font-weight: 600;
+  color: #000080;
+`;
+
+export { Container, Title };

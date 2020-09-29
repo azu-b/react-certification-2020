@@ -1,20 +1,25 @@
 import { createGlobalStyle } from 'styled-components';
+import FolksNormalWoff from './fonts/FolksNormal.woff';
+import FolksNormalWoff2 from './fonts/FolksNormal.woff2';
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'Folks Normal';
+    src: local('Folks Normal'), local('Folks Normal'),
+    url(${FolksNormalWoff2}) format('woff2'),
+    url(${FolksNormalWoff}) format('woff');
+    font-weight: 300;
+    font-style: normal;
+  }
+
   * {
     box-sizing: border-box;
-  }
-
-  body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-      'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  a, a:visited, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
   }
 `;
 
