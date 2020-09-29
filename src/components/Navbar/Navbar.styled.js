@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+  top: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 10px 15px;
   height: 50px;
   background-color: #b399ff;
   box-shadow: 0px 0px 13px -3px black;
@@ -38,28 +42,65 @@ const SearchContainer = styled.div`
 `;
 
 const Menu = styled.div`
-  display: block;
+  display: none;
 
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-around;
     width: 250px;
+  }
+`;
 
-    svg {
-      display: none;
-    }
+const OpenMenu = styled.div`
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-right: 1px solid #c4b3ff;
+  box-shadow: 0px 0px 13px -3px black;
+  width: 200px;
+  height: 100%;
+  background-color: white;
+
+  @media (min-width: 768px) {
+    display: none;
   }
 `;
 
 const MenuItem = styled.div`
-  display: none;
-  color: white;
+  width: 100%;
+  color: #3d0099;
   font-size: 18px;
   font-weight: 500;
+  padding: 10px;
+  border-bottom: 1px solid #c4b3ff;
 
   @media (min-width: 768px) {
-    display: block;
+    color: white;
+    border: none;
   }
 `;
 
-export { Container, SearchBar, SearchContainer, Menu, MenuItem };
+const Button = styled.div``;
+
+const HamburgerButton = styled(Button)`
+  display: flex;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export {
+  Container,
+  SearchBar,
+  SearchContainer,
+  Menu,
+  MenuItem,
+  OpenMenu,
+  HamburgerButton,
+};

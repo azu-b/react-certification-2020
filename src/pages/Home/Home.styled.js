@@ -10,4 +10,8 @@ const Subtitle = styled.h4`
   color: black;
 `;
 
-export { Title, Subtitle };
+const Container = styled.main`
+  margin-top: 50px;
+`;
+
+export { Title, Subtitle, Container };

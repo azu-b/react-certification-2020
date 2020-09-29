@@ -1,19 +1,50 @@
-import React from 'react';
-import { Container, SearchContainer, SearchBar, Menu, MenuItem } from './Navbar.styled';
+import React, { useState, useRef } from 'react';
+import useOutsideClick from '../../utils/hooks/useOutsideClick';
+import {
+  Container,
+  SearchContainer,
+  SearchBar,
+  Menu,
+  MenuItem,
+  OpenMenu,
+  HamburgerButton,
+} from './Navbar.styled';
 import { HamburgerIcon, SearchIcon } from '../Icons';
 
-const Navbar = () => (
-  <Container>
-    <Menu>
-      <HamburgerIcon />
+const Navbar = () => {
+  const openMenuRef = useRef();
+  const [isOpen, setOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setOpen(!isOpen);
+  };
+
+  const menuItems = (
+    <>
       <MenuItem>Home</MenuItem>
       <MenuItem>Log In</MenuItem>
-    </Menu>
-    <SearchContainer>
-      <SearchBar />
-      <SearchIcon />
-    </SearchContainer>
-  </Container>
-);
+    </>
+  );
+
+  useOutsideClick(openMenuRef, () => {
+    toggleMenu();
+  });
+
+  return (
+    <>
+      {isOpen && <OpenMenu ref={openMenuRef}>{menuItems}</OpenMenu>}
+      <Container>
+        <HamburgerButton onClick={toggleMenu}>
+          <HamburgerIcon />
+        </HamburgerButton>
+        <Menu>{menuItems}</Menu>
+        <SearchContainer>
+          <SearchBar />
+          <SearchIcon />
+        </SearchContainer>
+      </Container>
+    </>
+  );
+};
 
 export default Navbar;
