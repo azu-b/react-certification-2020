@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import useOutsideClick from '../../utils/hooks/useOutsideClick';
 import {
   Container,
@@ -21,7 +22,9 @@ const Navbar = () => {
 
   const menuItems = (
     <>
-      <MenuItem>Home</MenuItem>
+      <MenuItem>
+        <Link to="/">Home</Link>
+      </MenuItem>
       <MenuItem>Log In</MenuItem>
     </>
   );

@@ -16,6 +16,11 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
   }
+
+  a, a:visited, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 export default GlobalStyle;
