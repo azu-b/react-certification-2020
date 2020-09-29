@@ -53,7 +53,7 @@ const Menu = styled.div`
 
 const OpenMenu = styled.div`
   z-index: 2;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
