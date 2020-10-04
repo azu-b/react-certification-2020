@@ -8,12 +8,8 @@ const App = () => (
   <BrowserRouter>
     <Navbar />
     <Switch>
-      <Route path="/:id">
-        <Video />
-      </Route>
-      <Route exact path="/">
-        <Home />
-      </Route>
+      <Route path="/:id" component={Video} />
+      <Route exact path="/" component={Home} />
     </Switch>
   </BrowserRouter>
 );
