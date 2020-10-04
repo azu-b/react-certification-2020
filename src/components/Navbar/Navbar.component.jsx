@@ -10,7 +10,7 @@ import {
   OpenMenu,
   HamburgerButton,
 } from './Navbar.styled';
-import { HamburgerIcon, SearchIcon } from '../Icons';
+import { HamburgerIcon, SearchIcon } from '../../icons';
 
 const Navbar = () => {
   const openMenuRef = useRef();
