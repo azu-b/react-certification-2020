@@ -12,7 +12,7 @@ const YouTubeAPI = axios.create({
 const cleanYouTubeResponse = (videos) => {
   const cleanedVideos = videos.map((video) => {
     return {
-      id: video?.id || '',
+      id: video?.id?.videoId || '',
       title: video?.snippet?.title || '',
       description: video?.snippet?.description || '',
       thumbnails: video?.snippet?.thumbnails || '',

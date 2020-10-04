@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import VideoComponent from '../../components/Video';
-import { Container } from './Video.styled';
+import VideoList from '../../components/VideoList';
+import { Container, VideoContainer, RelatedVideosContainer } from './Video.styled';
 import { YouTubeAPI, cleanYouTubeResponse } from '../../utils/youtube';
 
 const Video = () => {
   const { id: videoId } = useParams();
   const [video, setVideo] = useState(undefined);
+  const [relatedVideos, setRelatedVideos] = useState(undefined);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -25,7 +27,24 @@ const Video = () => {
       }
     };
 
+    const getRelatedVideos = async () => {
+      try {
+        const response = await YouTubeAPI.get('/search', {
+          params: {
+            relatedToVideoId: videoId,
+            type: 'video',
+            maxResults: 25,
+          },
+        });
+        const cleanVideos = cleanYouTubeResponse(response.data.items);
+        setRelatedVideos(cleanVideos);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     getVideoInfo();
+    getRelatedVideos();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -33,13 +52,20 @@ const Video = () => {
     <Container>
       {isLoading && <div>Loading video info...</div>}
       {video ? (
-        <VideoComponent
-          id={videoId}
-          title={video.title}
-          description={video.description}
-        />
+        <VideoContainer>
+          <VideoComponent
+            id={videoId}
+            title={video.title}
+            description={video.description}
+          />
+        </VideoContainer>
       ) : (
         <div>Ups! No video with this id found</div>
+      )}
+      {relatedVideos && (
+        <RelatedVideosContainer>
+          <VideoList videos={relatedVideos} />
+        </RelatedVideosContainer>
       )}
     </Container>
   );
