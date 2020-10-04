@@ -74,9 +74,8 @@ const OpenMenu = styled.div`
 const MenuItem = styled.div`
   width: 100%;
   color: #3d0099;
-  font-family: 'Arial';
+  font-family: 'Heebo Regular';
   font-size: 18px;
-  font-weight: 500;
   padding: 10px;
   border-bottom: 1px solid #c4b3ff;
 

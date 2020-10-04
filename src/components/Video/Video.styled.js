@@ -30,4 +30,10 @@ const Description = styled.p`
   white-space: pre-wrap;
 `;
 
-export { Container, VideoContainer, Title, Description };
+const Error = styled.h2`
+  font-family: 'Folks Normal';
+  color: #9c0000;
+  padding: 10px;
+`;
+
+export { Container, VideoContainer, Title, Description, Error };

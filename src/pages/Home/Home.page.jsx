@@ -1,7 +1,5 @@
 import React from 'react';
 import { Container, Title } from './Home.styled';
-import SearchResults from '../../components/SearchResults';
-import mockVideos from '../../components/VideoList/mock';
 // import youtube from '../../utils/youtube';
 
 const Home = () => {
@@ -28,7 +26,6 @@ const Home = () => {
     <Container>
       {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
       <Title>🚧 Work in progress: Azu&apos;s React Certification Challenge</Title>
-      <SearchResults videos={mockVideos} />
     </Container>
   );
 };

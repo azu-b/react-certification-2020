@@ -46,7 +46,6 @@ const Video = () => {
 
     getVideoInfo();
     getRelatedVideos();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [videoId]);
 
   return (
