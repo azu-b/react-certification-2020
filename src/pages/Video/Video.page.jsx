@@ -20,6 +20,7 @@ const Video = () => {
           },
         });
         const cleanVideos = cleanYouTubeResponse(response.data.items);
+        console.log(cleanVideos);
         setVideo(cleanVideos[0]);
         setIsLoading(false);
       } catch (error) {
@@ -46,7 +47,7 @@ const Video = () => {
     getVideoInfo();
     getRelatedVideos();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [videoId]);
 
   return (
     <Container>

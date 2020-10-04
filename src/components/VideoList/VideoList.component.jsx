@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Container,
   Item,
@@ -10,6 +11,7 @@ import {
 
 const VideoList = (props) => {
   const { videos } = props;
+  // const history = useHistory();
 
   return (
     <Container>
@@ -21,10 +23,12 @@ const VideoList = (props) => {
           const { url } = defaultThumbnail;
 
           return (
-            <Item key={id}>
-              <Thumbnail src={url} />
-              <Title>{title}</Title>
-            </Item>
+            <Link key={id} to={`/${id}`}>
+              <Item>
+                <Thumbnail src={url} />
+                <Title>{title}</Title>
+              </Item>
+            </Link>
           );
         })}
       </VideosContainer>

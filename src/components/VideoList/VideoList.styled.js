@@ -31,10 +31,6 @@ const Item = styled.div`
   padding: 5px 0;
   border-bottom: 1px solid #d6d6f5;
 
-  &:last-child {
-    border-bottom: none;
-  }
-
   &:hover {
     background-color: #eee6ff;
     cursor: pointer;

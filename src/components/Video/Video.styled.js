@@ -25,9 +25,9 @@ const Description = styled.p`
   margin: 10px;
   font-family: 'Heebo Light';
   color: grey;
-  height: 200px;
-  overflow-x: hidden;
+  max-height: 200px;
   overflow-y: scroll;
+  white-space: pre-wrap;
 `;
 
 export { Container, VideoContainer, Title, Description };
