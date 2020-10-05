@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Video from './index';
 
 describe('<Video>', () => {
@@ -12,10 +12,10 @@ describe('<Video>', () => {
   };
 
   it('renders', () => {
-    const { getByTestId } = render(<Video {...props} />);
-    const video = getByTestId('video');
-    const title = getByTestId('title');
-    const description = getByTestId('description');
+    render(<Video {...props} />);
+    const video = screen.getByTestId('video');
+    const title = screen.getByTestId('title');
+    const description = screen.getByTestId('description');
 
     expect(video.tagName).toBe('IFRAME');
     expect(title.tagName).toBe('H1');
