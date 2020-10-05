@@ -7,33 +7,35 @@ import {
   Title,
   RelatedVideosTitle,
   VideosContainer,
-} from './VideoList.styled';
+  Error,
+} from './RelatedVideos.styled';
 
-const VideoList = (props) => {
+const RelatedVideos = (props) => {
   const { videos } = props;
-  // const history = useHistory();
 
-  return (
+  return videos ? (
     <Container>
       <RelatedVideosTitle>Related Videos</RelatedVideosTitle>
-      <VideosContainer>
+      <VideosContainer data-testid="video-list">
         {videos.map((video) => {
           const { id, title, thumbnails } = video;
           const { default: defaultThumbnail } = thumbnails;
           const { url } = defaultThumbnail;
 
           return (
-            <Link key={id} to={`/${id}`}>
-              <Item>
-                <Thumbnail src={url} />
-                <Title>{title}</Title>
+            <Link data-testid="link" key={id} to={`/${id}`}>
+              <Item data-testid="video-item">
+                <Thumbnail data-testid="thumbnail" src={url} />
+                <Title data-testid="title">{title}</Title>
               </Item>
             </Link>
           );
         })}
       </VideosContainer>
     </Container>
+  ) : (
+    <Error>No related videos were provided</Error>
   );
 };
 
-export default VideoList;
+export default RelatedVideos;

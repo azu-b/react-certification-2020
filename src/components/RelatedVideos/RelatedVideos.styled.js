@@ -53,4 +53,10 @@ const Title = styled.h4`
   }
 `;
 
-export { Container, Item, Thumbnail, Title, RelatedVideosTitle, VideosContainer };
+const Error = styled.h4`
+  font-family: 'Folks Normal';
+  color: #9c0000;
+  padding: 10px;
+`;
+
+export { Container, Item, Thumbnail, Title, RelatedVideosTitle, VideosContainer, Error };

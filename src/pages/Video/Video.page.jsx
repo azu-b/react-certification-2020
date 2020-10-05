@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import VideoComponent from '../../components/Video';
-import VideoList from '../../components/VideoList';
+import RelatedVideos from '../../components/RelatedVideos';
 import { Container, VideoContainer, RelatedVideosContainer } from './Video.styled';
 import { YouTubeAPI, cleanYouTubeResponse } from '../../utils/youtube';
 
@@ -20,7 +20,6 @@ const Video = () => {
           },
         });
         const cleanVideos = cleanYouTubeResponse(response.data.items);
-        console.log(cleanVideos);
         setVideo(cleanVideos[0]);
         setIsLoading(false);
       } catch (error) {
@@ -64,7 +63,7 @@ const Video = () => {
       )}
       {relatedVideos && (
         <RelatedVideosContainer>
-          <VideoList videos={relatedVideos} />
+          <RelatedVideos videos={relatedVideos} />
         </RelatedVideosContainer>
       )}
     </Container>

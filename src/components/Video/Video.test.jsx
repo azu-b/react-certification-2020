@@ -27,7 +27,7 @@ describe('<Video>', () => {
     expect(container.innerHTML).toMatchSnapshot();
   });
 
-  it('renders a message when no props are provided', () => {
+  it('renders an error message when no id, title nor description props are provided', () => {
     const { container } = render(<Video />);
     expect(container.innerHTML).toMatch('No video information was provided');
   });
