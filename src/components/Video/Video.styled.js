@@ -40,4 +40,14 @@ const Error = styled.h2`
   padding: 10px;
 `;
 
-export { Container, VideoContainer, Title, Description, Error };
+const FavoriteButton = styled.button`
+  font-size: 16px;
+  font-family: 'Heebo Medium';
+  background-color: ${(props) => (props.add ? '#00a541' : '#e27800')};
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+`;
+
+export { Container, VideoContainer, Title, Description, Error, FavoriteButton };
