@@ -35,13 +35,17 @@ const Navbar = () => {
 
   return (
     <>
-      {isOpen && <OpenMenu ref={openMenuRef}>{menuItems}</OpenMenu>}
-      <Container>
-        <HamburgerButton onClick={toggleMenu}>
+      {isOpen && (
+        <OpenMenu data-testid="mobile-menu" ref={openMenuRef}>
+          {menuItems}
+        </OpenMenu>
+      )}
+      <Container data-testid="container">
+        <HamburgerButton data-testid="hamburger" onClick={toggleMenu}>
           <HamburgerIcon />
         </HamburgerButton>
-        <Menu>{menuItems}</Menu>
-        <SearchContainer>
+        <Menu data-testid="menu">{menuItems}</Menu>
+        <SearchContainer data-testid="search">
           <SearchBar />
           <SearchIcon />
         </SearchContainer>

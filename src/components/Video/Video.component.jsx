@@ -1,15 +1,17 @@
 import React from 'react';
-import { Container, VideoContainer, Title, Description } from './Video.styled';
+import { Container, VideoContainer, Title, Description, Error } from './Video.styled';
 
 const Video = (props) => {
-  const { id, title, description } = props;
+  const { id, title, description } = props || null;
 
-  return (
+  return id && title && description ? (
     <Container>
-      <VideoContainer src={`https://www.youtube.com/embed/${id}`} />
-      <Title>{title}</Title>
-      <Description>{description}</Description>
+      <VideoContainer data-testid="video" src={`https://www.youtube.com/embed/${id}`} />
+      <Title data-testid="title">{title}</Title>
+      <Description data-testid="description">{description}</Description>
     </Container>
+  ) : (
+    <Error>No video information was provided</Error>
   );
 };
 
