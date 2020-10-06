@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState, useEffect, useContext } from 'react';
-import SearchContext from '../../state/SearchContext';
+import { SearchContext } from '../../state';
 import SearchResults from '../../components/SearchResults';
 import { Container, Title, Load, Error } from './Home.styled';
 import { homeTitle, buildTitle } from '../../utils/pagesTitles';

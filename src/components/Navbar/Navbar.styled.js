@@ -18,36 +18,18 @@ const Container = styled.div`
   }
 `;
 
-const SearchBar = styled.input`
-  width: 200px;
-  height: 30px;
-  font-size: 14px;
-  border: none;
-  box-shadow: inset 0px 0px 11px -4px #9d80ff;
-
-  @media (min-width: 768px) {
-    width: 250px;
-  }
-`;
-
-const SearchContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 230px;
-
-  @media (min-width: 768px) {
-    width: 280px;
-  }
-`;
-
 const Menu = styled.div`
   display: none;
 
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-around;
-    width: 250px;
+    align-items: center;
+    width: 450px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 550px;
   }
 `;
 
@@ -80,7 +62,18 @@ const MenuItem = styled.div`
   border-bottom: 1px solid #c4b3ff;
 
   @media (min-width: 768px) {
+    width: auto;
+    font-size: 16px;
     color: white;
+    border: none;
+  }
+`;
+
+const Welcome = styled(MenuItem)`
+  font-family: 'Heebo Light';
+  border-bottom: 2px solid #3d0099;
+
+  @media (min-width: 768px) {
     border: none;
   }
 `;
@@ -95,12 +88,4 @@ const HamburgerButton = styled(Button)`
   }
 `;
 
-export {
-  Container,
-  SearchBar,
-  SearchContainer,
-  Menu,
-  MenuItem,
-  OpenMenu,
-  HamburgerButton,
-};
+export { Container, Menu, MenuItem, OpenMenu, HamburgerButton, Welcome };

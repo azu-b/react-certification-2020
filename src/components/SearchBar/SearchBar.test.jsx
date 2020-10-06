@@ -2,7 +2,7 @@ import React from 'react';
 import { render, cleanup, screen, fireEvent } from '@testing-library/react';
 import { useHistory } from 'react-router-dom';
 import pretty from 'pretty';
-import SearchContext from '../../state/SearchContext';
+import { SearchContext } from '../../state';
 import SearchBar from './index';
 
 jest.mock('react-router-dom', () => {
