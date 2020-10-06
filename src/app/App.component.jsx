@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import SearchContext from '../state/SearchContext';
 import Home from '../pages/Home';
 import Video from '../pages/Video';
+import LogIn from '../pages/LogIn';
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState('cats');
@@ -13,8 +14,9 @@ const App = () => {
       <BrowserRouter>
         <Navbar />
         <Switch>
-          <Route path="/:id" component={Video} />
-          <Route exact path="/" component={Home} />
+          <Route path="/video/:id" component={Video} />
+          <Route path="/login" component={LogIn} />
+          <Route path="/" component={Home} />
         </Switch>
       </BrowserRouter>
     </SearchContext.Provider>

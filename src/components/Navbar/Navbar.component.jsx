@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import useOutsideClick from '../../utils/hooks/useOutsideClick';
@@ -13,15 +14,35 @@ const Navbar = () => {
     setOpen(!isOpen);
   };
 
-  const menuItems = (
-    <>
-      <MenuItem>
-        <Link to="/" onClick={toggleMenu}>
-          Home
-        </Link>
-      </MenuItem>
-      <MenuItem>Log In</MenuItem>
-    </>
+  const menuItems = [
+    { name: 'Home', link: '/' },
+    { name: 'Log In', link: '/login' },
+  ];
+
+  const mobileMenu = (
+    <OpenMenu data-testid="mobile-menu" ref={openMenuRef}>
+      {menuItems.map(({ name, link }, index) => {
+        return (
+          <MenuItem key={index}>
+            <Link to={link} onClick={toggleMenu}>
+              {name}
+            </Link>
+          </MenuItem>
+        );
+      })}
+    </OpenMenu>
+  );
+
+  const tabletMenu = (
+    <Menu data-testid="menu">
+      {menuItems.map(({ name, link }, index) => {
+        return (
+          <MenuItem key={index}>
+            <Link to={link}>{name}</Link>
+          </MenuItem>
+        );
+      })}
+    </Menu>
   );
 
   useOutsideClick(openMenuRef, () => {
@@ -30,16 +51,12 @@ const Navbar = () => {
 
   return (
     <>
-      {isOpen && (
-        <OpenMenu data-testid="mobile-menu" ref={openMenuRef}>
-          {menuItems}
-        </OpenMenu>
-      )}
+      {isOpen && mobileMenu}
       <Container data-testid="container">
         <HamburgerButton data-testid="hamburger" onClick={toggleMenu}>
           <HamburgerIcon />
         </HamburgerButton>
-        <Menu data-testid="menu">{menuItems}</Menu>
+        {tabletMenu}
         <SearchBar data-testid="search" />
       </Container>
     </>
