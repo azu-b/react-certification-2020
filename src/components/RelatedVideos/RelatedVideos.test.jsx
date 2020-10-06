@@ -1,13 +1,18 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, cleanup, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
+import pretty from 'pretty';
 import RelatedVideos from './index';
 import searchResponse from '../../mocks/searchResponse';
-import { cleanYouTubeResponse } from '../../utils/youtube';
+import { cleanYouTubeResponse } from '../../utils/helpers';
 
 describe('<RelatedVideos>', () => {
   const cleanSearchResponse = cleanYouTubeResponse(searchResponse.items);
   const mockResponseLength = cleanSearchResponse.length;
+
+  afterEach(() => {
+    cleanup();
+  });
 
   it('renders', () => {
     render(
@@ -43,7 +48,7 @@ describe('<RelatedVideos>', () => {
       </MemoryRouter>
     );
 
-    expect(container.innerHTML).toMatchSnapshot();
+    expect(pretty(container.innerHTML)).toMatchSnapshot();
   });
 
   it('renders an error message when no videos prop is provided', () => {
@@ -53,6 +58,6 @@ describe('<RelatedVideos>', () => {
       </MemoryRouter>
     );
 
-    expect(container.innerHTML).toMatch('No related videos were provided');
+    expect(container.innerHTML).toMatch('No related videos were found');
   });
 });

@@ -53,7 +53,7 @@ const Title = styled.h4`
   }
 `;
 
-const Error = styled.h4`
+const Error = styled.h3`
   font-family: 'Folks Normal';
   color: #9c0000;
   padding: 10px;

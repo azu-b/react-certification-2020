@@ -1,9 +1,14 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, cleanup, screen, fireEvent } from '@testing-library/react';
+import pretty from 'pretty';
 import { MemoryRouter } from 'react-router-dom';
 import Navbar from './index';
 
 describe('<Navbar>', () => {
+  afterEach(() => {
+    cleanup();
+  });
+
   it('renders', () => {
     render(
       <MemoryRouter>
@@ -28,7 +33,7 @@ describe('<Navbar>', () => {
         <Navbar />
       </MemoryRouter>
     );
-    expect(container.innerHTML).toMatchSnapshot();
+    expect(pretty(container.innerHTML)).toMatchSnapshot();
   });
 
   it('opens the mobile menu when hamburger button is clicked', () => {

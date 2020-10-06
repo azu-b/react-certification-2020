@@ -1,5 +1,6 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, cleanup, screen } from '@testing-library/react';
+import pretty from 'pretty';
 import Video from './index';
 
 describe('<Video>', () => {
@@ -10,6 +11,10 @@ describe('<Video>', () => {
 
       (not my work)`,
   };
+
+  afterEach(() => {
+    cleanup();
+  });
 
   it('renders', () => {
     render(<Video {...props} />);
@@ -24,7 +29,7 @@ describe('<Video>', () => {
 
   it('matches snapshot', () => {
     const { container } = render(<Video {...props} />);
-    expect(container.innerHTML).toMatchSnapshot();
+    expect(pretty(container.innerHTML)).toMatchSnapshot();
   });
 
   it('renders an error message when no id, title nor description props are provided', () => {

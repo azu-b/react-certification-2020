@@ -34,7 +34,8 @@ const RelatedVideos = (props) => {
       </VideosContainer>
     </Container>
   ) : (
-    <Error>No related videos were provided</Error>
+    // eslint-disable-next-line jsx-a11y/accessible-emoji
+    <Error>No related videos were found 😨</Error>
   );
 };
 
