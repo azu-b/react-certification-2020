@@ -11,7 +11,11 @@ const Title = styled.h1`
   font-size: 32px;
   font-weight: 600;
   color: #000080;
-  padding: 10px;
+  margin: 20px;
+
+  @media (min-width: 768px) {
+    margin: 20px auto;
+  }
 `;
 
 const Load = styled.div`
