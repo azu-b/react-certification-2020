@@ -13,7 +13,7 @@ const SearchResults = (props) => {
           const { medium } = thumbnails;
           const { url } = medium;
           return (
-            <Link key={id} to={`/${id}`}>
+            <Link key={id} to={`/video/${id}`}>
               <VideoCard title={title} description={description} thumbnail={url} />
             </Link>
           );
