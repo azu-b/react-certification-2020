@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Video> matches snapshot 1`] = `
+"<div class=\\"sc-bdnylx jiVbiK\\"><iframe data-testid=\\"video\\" src=\\"https://www.youtube.com/embed/uE-1RPDqJAY\\" class=\\"sc-gtssRu bTjPez\\"></iframe>
+  <h1 data-testid=\\"title\\" class=\\"sc-dlnjPT cuonUe\\">taking the hobbits to isengard</h1>
+  <p data-testid=\\"description\\" class=\\"sc-hKFyIo ckbdfc\\">THEY\\"RE TAKING THE HOBBITS TO ISENGARD
+
+    (not my work)</p>
+</div>"
+`;
