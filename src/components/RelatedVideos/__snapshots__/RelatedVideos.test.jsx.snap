@@ -4,24 +4,24 @@ exports[`<RelatedVideos> matches snapshot 1`] = `
 "<div class=\\"sc-gtssRu bMBAbX\\">
   <h2 class=\\"sc-bdnylx eGPSfR\\">Related Videos</h2>
   <div data-testid=\\"video-list\\" class=\\"sc-gtssRu sc-dlnjPT bMBAbX cJMenI\\"><a data-testid=\\"link\\" href=\\"/3w5hjn7sY8g\\">
-      <div data-testid=\\"video-item\\" class=\\"sc-hKFyIo dLowRa\\"><img data-testid=\\"thumbnail\\" src=\\"https://i.ytimg.com/vi/3w5hjn7sY8g/default.jpg\\" class=\\"sc-eCApGN dFuKii\\">
-        <h4 data-testid=\\"title\\" class=\\"sc-jSFkmK NLQyU\\">HIGH ELO Best Champions TIER List - League of Legends Patch 10.20</h4>
+      <div data-testid=\\"video-item\\" class=\\"sc-hKFyIo hztzrr\\"><img data-testid=\\"thumbnail\\" src=\\"https://i.ytimg.com/vi/3w5hjn7sY8g/default.jpg\\" class=\\"sc-eCApGN dFuKii\\">
+        <h4 data-testid=\\"title\\" class=\\"sc-jSFkmK eAifiS\\">HIGH ELO Best Champions TIER List - League of Legends Patch 10.20</h4>
       </div>
     </a><a data-testid=\\"link\\" href=\\"/RR0JFDWuceo\\">
-      <div data-testid=\\"video-item\\" class=\\"sc-hKFyIo dLowRa\\"><img data-testid=\\"thumbnail\\" src=\\"https://i.ytimg.com/vi/RR0JFDWuceo/default.jpg\\" class=\\"sc-eCApGN dFuKii\\">
-        <h4 data-testid=\\"title\\" class=\\"sc-jSFkmK NLQyU\\">When LOL Players PERFECT ESCAPE... 200 IQ ESCAPES MONTAGE (League of Legends)</h4>
+      <div data-testid=\\"video-item\\" class=\\"sc-hKFyIo hztzrr\\"><img data-testid=\\"thumbnail\\" src=\\"https://i.ytimg.com/vi/RR0JFDWuceo/default.jpg\\" class=\\"sc-eCApGN dFuKii\\">
+        <h4 data-testid=\\"title\\" class=\\"sc-jSFkmK eAifiS\\">When LOL Players PERFECT ESCAPE... 200 IQ ESCAPES MONTAGE (League of Legends)</h4>
       </div>
     </a><a data-testid=\\"link\\" href=\\"/o1YfnQ5enz8\\">
-      <div data-testid=\\"video-item\\" class=\\"sc-hKFyIo dLowRa\\"><img data-testid=\\"thumbnail\\" src=\\"https://i.ytimg.com/vi/o1YfnQ5enz8/default.jpg\\" class=\\"sc-eCApGN dFuKii\\">
-        <h4 data-testid=\\"title\\" class=\\"sc-jSFkmK NLQyU\\">THIS ITEM MAKE SHACO PERMINENTLY INVISIBLE (NO COUNTER) - BunnyFuFuu | League Of Legends | Season 11</h4>
+      <div data-testid=\\"video-item\\" class=\\"sc-hKFyIo hztzrr\\"><img data-testid=\\"thumbnail\\" src=\\"https://i.ytimg.com/vi/o1YfnQ5enz8/default.jpg\\" class=\\"sc-eCApGN dFuKii\\">
+        <h4 data-testid=\\"title\\" class=\\"sc-jSFkmK eAifiS\\">THIS ITEM MAKE SHACO PERMINENTLY INVISIBLE (NO COUNTER) - BunnyFuFuu | League Of Legends | Season 11</h4>
       </div>
     </a><a data-testid=\\"link\\" href=\\"/aR-KAldshAE\\">
-      <div data-testid=\\"video-item\\" class=\\"sc-hKFyIo dLowRa\\"><img data-testid=\\"thumbnail\\" src=\\"https://i.ytimg.com/vi/aR-KAldshAE/default.jpg\\" class=\\"sc-eCApGN dFuKii\\">
-        <h4 data-testid=\\"title\\" class=\\"sc-jSFkmK NLQyU\\">Warriors | Season 2020 Cinematic - League of Legends (ft. 2WEI and Edda Hayes)</h4>
+      <div data-testid=\\"video-item\\" class=\\"sc-hKFyIo hztzrr\\"><img data-testid=\\"thumbnail\\" src=\\"https://i.ytimg.com/vi/aR-KAldshAE/default.jpg\\" class=\\"sc-eCApGN dFuKii\\">
+        <h4 data-testid=\\"title\\" class=\\"sc-jSFkmK eAifiS\\">Warriors | Season 2020 Cinematic - League of Legends (ft. 2WEI and Edda Hayes)</h4>
       </div>
     </a><a data-testid=\\"link\\" href=\\"/pngf7xqrsDU\\">
-      <div data-testid=\\"video-item\\" class=\\"sc-hKFyIo dLowRa\\"><img data-testid=\\"thumbnail\\" src=\\"https://i.ytimg.com/vi/pngf7xqrsDU/default.jpg\\" class=\\"sc-eCApGN dFuKii\\">
-        <h4 data-testid=\\"title\\" class=\\"sc-jSFkmK NLQyU\\">NEW UPDATES: Seraphine Abilities LEAKED? + Upcoming JG &amp;amp; Mid Nerfs &amp;amp; MORE - League of Legends</h4>
+      <div data-testid=\\"video-item\\" class=\\"sc-hKFyIo hztzrr\\"><img data-testid=\\"thumbnail\\" src=\\"https://i.ytimg.com/vi/pngf7xqrsDU/default.jpg\\" class=\\"sc-eCApGN dFuKii\\">
+        <h4 data-testid=\\"title\\" class=\\"sc-jSFkmK eAifiS\\">NEW UPDATES: Seraphine Abilities LEAKED? + Upcoming JG &amp;amp; Mid Nerfs &amp;amp; MORE - League of Legends</h4>
       </div>
     </a></div>
 </div>"
