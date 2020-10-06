@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, cleanup, screen } from '@testing-library/react';
 import pretty from 'pretty';
+import { AuthProvider } from '../../state';
 import Video from './index';
 
 describe('<Video>', () => {
@@ -17,7 +18,11 @@ describe('<Video>', () => {
   });
 
   it('renders', () => {
-    render(<Video {...props} />);
+    render(
+      <AuthProvider>
+        <Video {...props} />
+      </AuthProvider>
+    );
     const video = screen.getByTestId('video');
     const title = screen.getByTestId('title');
     const description = screen.getByTestId('description');
@@ -28,12 +33,20 @@ describe('<Video>', () => {
   });
 
   it('matches snapshot', () => {
-    const { container } = render(<Video {...props} />);
+    const { container } = render(
+      <AuthProvider>
+        <Video {...props} />
+      </AuthProvider>
+    );
     expect(pretty(container.innerHTML)).toMatchSnapshot();
   });
 
   it('renders an error message when no id, title nor description props are provided', () => {
-    const { container } = render(<Video />);
+    const { container } = render(
+      <AuthProvider>
+        <Video />
+      </AuthProvider>
+    );
     expect(container.innerHTML).toMatch('No video information was provided');
   });
 });

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VideoPage> matches snapshot 1`] = `
+"<div class=\\"sc-crzoUp bluRdc\\">
+  <div class=\\"sc-dIsAE dmHtcx\\">
+    <div class=\\"sc-bdnylx jiVbiK\\"><iframe data-testid=\\"video\\" src=\\"https://www.youtube.com/embed/123\\" class=\\"sc-gtssRu llVzmO\\"></iframe>
+      <h1 data-testid=\\"title\\" class=\\"sc-dlnjPT cuonUe\\">HIGH ELO Best Champions TIER List - League of Legends Patch 10.20</h1>
+      <p data-testid=\\"description\\" class=\\"sc-hKFyIo ckbdfc\\">Want instant, easily-accessible, 24-7 coaching from high elo players? Then check out our website: https://www.proguides.com/yt Patch 10.20 comes with ...</p>
+    </div>
+  </div>
+  <div class=\\"sc-bqGHjH kZvmdo\\">
+    <div class=\\"sc-iCoHVE jowieF\\">
+      <h2 class=\\"sc-gKAblj epZClN\\">Related Videos</h2>
+      <div data-testid=\\"video-list\\" class=\\"sc-iCoHVE sc-fujyUd jowieF dJiQVZ\\"><a data-testid=\\"link\\" href=\\"/video/3w5hjn7sY8g\\">
+          <div data-testid=\\"video-item\\" class=\\"sc-pNWxx kUTBDY\\"><img data-testid=\\"thumbnail\\" src=\\"https://i.ytimg.com/vi/3w5hjn7sY8g/default.jpg\\" class=\\"sc-jrsJCI fFewxX\\">
+            <h4 data-testid=\\"title\\" class=\\"sc-kEqYlL cKACju\\">HIGH ELO Best Champions TIER List - League of Legends Patch 10.20</h4>
+          </div>
+        </a><a data-testid=\\"link\\" href=\\"/video/RR0JFDWuceo\\">
+          <div data-testid=\\"video-item\\" class=\\"sc-pNWxx kUTBDY\\"><img data-testid=\\"thumbnail\\" src=\\"https://i.ytimg.com/vi/RR0JFDWuceo/default.jpg\\" class=\\"sc-jrsJCI fFewxX\\">
+            <h4 data-testid=\\"title\\" class=\\"sc-kEqYlL cKACju\\">When LOL Players PERFECT ESCAPE... 200 IQ ESCAPES MONTAGE (League of Legends)</h4>
+          </div>
+        </a><a data-testid=\\"link\\" href=\\"/video/o1YfnQ5enz8\\">
+          <div data-testid=\\"video-item\\" class=\\"sc-pNWxx kUTBDY\\"><img data-testid=\\"thumbnail\\" src=\\"https://i.ytimg.com/vi/o1YfnQ5enz8/default.jpg\\" class=\\"sc-jrsJCI fFewxX\\">
+            <h4 data-testid=\\"title\\" class=\\"sc-kEqYlL cKACju\\">THIS ITEM MAKE SHACO PERMINENTLY INVISIBLE (NO COUNTER) - BunnyFuFuu | League Of Legends | Season 11</h4>
+          </div>
+        </a><a data-testid=\\"link\\" href=\\"/video/aR-KAldshAE\\">
+          <div data-testid=\\"video-item\\" class=\\"sc-pNWxx kUTBDY\\"><img data-testid=\\"thumbnail\\" src=\\"https://i.ytimg.com/vi/aR-KAldshAE/default.jpg\\" class=\\"sc-jrsJCI fFewxX\\">
+            <h4 data-testid=\\"title\\" class=\\"sc-kEqYlL cKACju\\">Warriors | Season 2020 Cinematic - League of Legends (ft. 2WEI and Edda Hayes)</h4>
+          </div>
+        </a><a data-testid=\\"link\\" href=\\"/video/pngf7xqrsDU\\">
+          <div data-testid=\\"video-item\\" class=\\"sc-pNWxx kUTBDY\\"><img data-testid=\\"thumbnail\\" src=\\"https://i.ytimg.com/vi/pngf7xqrsDU/default.jpg\\" class=\\"sc-jrsJCI fFewxX\\">
+            <h4 data-testid=\\"title\\" class=\\"sc-kEqYlL cKACju\\">NEW UPDATES: Seraphine Abilities LEAKED? + Upcoming JG &amp;amp; Mid Nerfs &amp;amp; MORE - League of Legends</h4>
+          </div>
+        </a></div>
+    </div>
+  </div>
+</div>"
+`;

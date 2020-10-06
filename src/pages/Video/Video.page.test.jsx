@@ -1,5 +1,7 @@
+import React from 'react';
 import { cleanup, act, screen } from '@testing-library/react';
 import pretty from 'pretty';
+import { AuthProvider } from '../../state';
 import Video from './index';
 import YouTubeAPI from '../../utils/youtube';
 import { renderWithRouterMatch } from '../../utils/helpers';
@@ -8,6 +10,12 @@ import searchResponse from '../../mocks/searchResponse';
 jest.mock('../../utils/youtube');
 
 describe('<VideoPage>', () => {
+  const VideoWithAuthProvider = () => (
+    <AuthProvider>
+      <Video />
+    </AuthProvider>
+  );
+
   afterEach(() => {
     jest.clearAllMocks();
     cleanup();
@@ -17,7 +25,7 @@ describe('<VideoPage>', () => {
     YouTubeAPI.get.mockImplementation(() => Promise.resolve({ data: searchResponse }));
 
     await act(async () => {
-      renderWithRouterMatch(Video, {
+      renderWithRouterMatch(VideoWithAuthProvider, {
         route: '/123',
         path: '/:id',
       });
@@ -48,7 +56,7 @@ describe('<VideoPage>', () => {
     let wrapper;
 
     await act(async () => {
-      wrapper = renderWithRouterMatch(Video, {
+      wrapper = renderWithRouterMatch(VideoWithAuthProvider, {
         route: '/123',
         path: '/:id',
       });
@@ -65,7 +73,7 @@ describe('<VideoPage>', () => {
     let wrapper;
 
     await act(async () => {
-      wrapper = renderWithRouterMatch(Video, {
+      wrapper = renderWithRouterMatch(VideoWithAuthProvider, {
         route: '/invalid',
         path: '/:id',
       });
@@ -82,7 +90,7 @@ describe('<VideoPage>', () => {
     let wrapper;
 
     await act(async () => {
-      wrapper = renderWithRouterMatch(Video, {
+      wrapper = renderWithRouterMatch(VideoWithAuthProvider, {
         route: '/123',
         path: '/:id',
       });
