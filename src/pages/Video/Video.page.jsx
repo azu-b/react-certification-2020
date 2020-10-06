@@ -13,6 +13,7 @@ import {
 } from './Video.page.styled';
 import YouTubeAPI from '../../utils/youtube';
 import { cleanYouTubeResponse } from '../../utils/helpers';
+import { buildTitle } from '../../utils/pagesTitles';
 
 const Video = () => {
   const { id: videoId } = useParams();
@@ -20,6 +21,8 @@ const Video = () => {
   const [relatedVideos, setRelatedVideos] = useState(undefined);
   const [isLoadingVideoInfo, setIsLoadingVideoInfo] = useState(true);
   const [isLoadingRelatedVideos, setIsLoadingRelatedVideos] = useState(true);
+
+  document.title = buildTitle(`Video ID: ${videoId}`);
 
   useEffect(() => {
     const getRelatedVideos = async () => {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Title } from './Home.styled';
+import { homeTitle, buildTitle } from '../../utils/pagesTitles';
 // import youtube from '../../utils/youtube';
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
   // };
 
   // getSearchResults();
+  document.title = buildTitle(homeTitle);
 
   return (
     <Container>
