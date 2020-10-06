@@ -6,13 +6,11 @@ const Card = styled.div`
   align-items: flex-start;
   width: 320px;
   height: 320px;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+  box-shadow: 2px 2px 30px -15px black;
   overflow: hidden;
   margin: 15px 0;
 
   @media (min-width: 768px) {
-    border: 1px solid grey;
     margin: 30px;
   }
 
@@ -38,7 +36,7 @@ const Title = styled.h3`
 `;
 
 const Description = styled.p`
-  font-family: 'Arial';
+  font-family: 'Heebo Light';
   color: grey;
   font-size: 13px;
   padding: 10px 5px;

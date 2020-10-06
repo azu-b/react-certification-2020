@@ -1,31 +1,51 @@
-import React from 'react';
-import { Container, Title } from './Home.styled';
-// import youtube from '../../utils/youtube';
+/* eslint-disable jsx-a11y/accessible-emoji */
+import React, { useState, useEffect, useContext } from 'react';
+import SearchContext from '../../state/SearchContext';
+import SearchResults from '../../components/SearchResults';
+import { Container, Title, Load, Error } from './Home.styled';
+import { homeTitle, buildTitle } from '../../utils/pagesTitles';
+import YouTubeAPI from '../../utils/youtube';
+import { cleanYouTubeResponse } from '../../utils/helpers';
 
 const Home = () => {
-  // const [videos, setVideos] = useState([]);
+  const { searchTerm } = useContext(SearchContext);
+  const [videos, setVideos] = useState(undefined);
+  const [isLoading, setLoading] = useState(true);
 
-  // const getSearchResults = async () => {
-  //   try {
-  //     const response = await youtube.get('/search', {
-  //       params: {
-  //         q: 'cats',
-  //         maxResults: 30,
-  //       },
-  //     });
-  //     console.log(response.data.items);
-  //     setVideos(response.data.items);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
+  document.title = buildTitle(homeTitle);
 
-  // getSearchResults();
+  useEffect(() => {
+    const getSearchResults = async () => {
+      try {
+        const response = await YouTubeAPI.get('/search', {
+          params: {
+            q: searchTerm,
+            type: 'video',
+            maxResults: 30,
+          },
+        });
+        const cleanVideos = cleanYouTubeResponse(response.data.items);
+        setVideos(cleanVideos);
+        setLoading(false);
+      } catch (error) {
+        console.log(error.message);
+        setLoading(false);
+      }
+    };
+
+    getSearchResults();
+  }, [searchTerm]);
 
   return (
     <Container>
-      {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
       <Title>🚧 Work in progress: Azu&apos;s React Certification Challenge</Title>
+      {isLoading && <Load>Loading search results ⏰</Load>}
+      {!isLoading &&
+        (videos ? (
+          <SearchResults videos={videos} />
+        ) : (
+          <Error>Ups! Something went wrong 😨</Error>
+        ))}
     </Container>
   );
 };
