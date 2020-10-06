@@ -23,7 +23,7 @@ const RelatedVideos = (props) => {
           const { url } = defaultThumbnail;
 
           return (
-            <Link data-testid="link" key={id} to={`/${id}`}>
+            <Link data-testid="link" key={id} to={`/video/${id}`}>
               <Item data-testid="video-item">
                 <Thumbnail data-testid="thumbnail" src={url} />
                 <Title data-testid="title">{title}</Title>
