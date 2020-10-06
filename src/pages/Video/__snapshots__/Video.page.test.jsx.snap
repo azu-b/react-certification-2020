@@ -5,7 +5,7 @@ exports[`<VideoPage> matches snapshot 1`] = `
   <div class=\\"sc-dIsAE dmHtcx\\">
     <div class=\\"sc-bdnylx jiVbiK\\"><iframe data-testid=\\"video\\" src=\\"https://www.youtube.com/embed/123\\" class=\\"sc-gtssRu llVzmO\\"></iframe>
       <h1 data-testid=\\"title\\" class=\\"sc-dlnjPT cuonUe\\">HIGH ELO Best Champions TIER List - League of Legends Patch 10.20</h1>
-      <p data-testid=\\"description\\" class=\\"sc-hKFyIo ckbdfc\\">Want instant, easily-accessible, 24-7 coaching from high elo players? Then check out our website: https://www.proguides.com/yt Patch 10.20 comes with ...</p><button class=\\"sc-jSFkmK kwhfdS\\">Remove from Favorites</button>
+      <p data-testid=\\"description\\" class=\\"sc-hKFyIo ckbdfc\\">Want instant, easily-accessible, 24-7 coaching from high elo players? Then check out our website: https://www.proguides.com/yt Patch 10.20 comes with ...</p>
     </div>
   </div>
   <div class=\\"sc-bqGHjH kZvmdo\\">

@@ -5,6 +5,6 @@ exports[`<Video> matches snapshot 1`] = `
   <h1 data-testid=\\"title\\" class=\\"sc-dlnjPT cuonUe\\">taking the hobbits to isengard</h1>
   <p data-testid=\\"description\\" class=\\"sc-hKFyIo ckbdfc\\">THEY\\"RE TAKING THE HOBBITS TO ISENGARD
 
-    (not my work)</p><button class=\\"sc-jSFkmK kwhfdS\\">Remove from Favorites</button>
+    (not my work)</p>
 </div>"
 `;
