@@ -12,6 +12,10 @@ const VideoContainer = styled.iframe`
   @media (min-width: 768px) {
     height: 500px;
   }
+
+  @media (min-width: 1440px) {
+    height: 600px;
+  }
 `;
 
 const Title = styled.h1`

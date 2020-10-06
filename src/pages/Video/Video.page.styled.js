@@ -15,7 +15,7 @@ const VideoContainer = styled.div`
   padding: 10px;
 
   @media (min-width: 1024px) {
-    width: 60%;
+    width: 66.67%;
     padding: 20px;
   }
 `;
@@ -25,7 +25,7 @@ const RelatedVideosContainer = styled.div`
   padding: 10px;
 
   @media (min-width: 1024px) {
-    width: 40%;
+    width: 33.33%;
     padding: 20px;
   }
 `;

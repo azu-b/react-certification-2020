@@ -30,6 +30,7 @@ const Item = styled.div`
   height: 100px;
   padding: 5px 0;
   border-bottom: 1px solid #d6d6f5;
+  overflow-y: hidden;
 
   &:hover {
     background-color: #eee6ff;
@@ -46,10 +47,14 @@ const Title = styled.h4`
   font-family: 'Heebo Medium';
   font-size: 13px;
   color: #191966;
-  margin: 5px 10px;
+  margin: 0 10px;
 
   @media (min-width: 768px) {
     font-size: 16px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 15px;
   }
 `;
 
