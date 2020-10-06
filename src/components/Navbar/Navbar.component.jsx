@@ -23,7 +23,9 @@ const Navbar = () => {
   const menuItems = (
     <>
       <MenuItem>
-        <Link to="/">Home</Link>
+        <Link to="/" onClick={toggleMenu}>
+          Home
+        </Link>
       </MenuItem>
       <MenuItem>Log In</MenuItem>
     </>

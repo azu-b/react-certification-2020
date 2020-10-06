@@ -13,4 +13,16 @@ const Container = styled.div`
   }
 `;
 
-export { Container };
+const Error = styled.div`
+  font-family: 'Folks Normal';
+  color: #9c0000;
+  font-size: 32px;
+  margin: 20px;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    margin: 20px auto;
+  }
+`;
+
+export { Container, Error };
