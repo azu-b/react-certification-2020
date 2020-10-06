@@ -15,14 +15,19 @@ const Title = styled.h1`
 `;
 
 const LogInContainer = styled.form`
-  margin: 20px;
+  margin: 15px;
   padding: 20px 30px;
-  height: 300px;
+  height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 0px 20px -3px #b3d0ff;
+
+  @media (min-width: 768px) {
+    height: 300px;
+    padding: 25px 35px;
+  }
 `;
 
 const InputTitle = styled.label`
@@ -42,6 +47,10 @@ const InputBox = styled.input`
   font-family: 'Heebo Light';
   font-size: 16px;
   color: black;
+
+  @media (min-width: 768px) {
+    width: 200px;
+  }
 `;
 
 const Button = styled.button`
@@ -54,4 +63,9 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export { Container, Title, LogInContainer, InputTitle, InputBox, Button };
+const Error = styled.h4`
+  font-family: 'Heebo Light';
+  color: #9c0000;
+`;
+
+export { Container, Title, LogInContainer, InputTitle, InputBox, Button, Error };

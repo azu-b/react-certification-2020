@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import SearchContext from '../../state/SearchContext';
+import { SearchContext } from '../../state';
 import { Container, SearchInput, SearchButton } from './SearchBar.styled';
 import { SearchIcon } from '../../icons';
 

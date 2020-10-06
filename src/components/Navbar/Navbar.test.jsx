@@ -3,6 +3,7 @@ import { render, cleanup, screen, fireEvent } from '@testing-library/react';
 import pretty from 'pretty';
 import { MemoryRouter } from 'react-router-dom';
 import Navbar from './index';
+import { AuthProvider } from '../../state';
 
 describe('<Navbar>', () => {
   afterEach(() => {
@@ -11,9 +12,11 @@ describe('<Navbar>', () => {
 
   it('renders', () => {
     render(
-      <MemoryRouter>
-        <Navbar />
-      </MemoryRouter>
+      <AuthProvider>
+        <MemoryRouter>
+          <Navbar />
+        </MemoryRouter>
+      </AuthProvider>
     );
     const wrapper = screen.getByTestId('container');
     const hamburger = screen.getByTestId('hamburger');
@@ -29,18 +32,22 @@ describe('<Navbar>', () => {
 
   it('matches snapshot', () => {
     const { container } = render(
-      <MemoryRouter>
-        <Navbar />
-      </MemoryRouter>
+      <AuthProvider>
+        <MemoryRouter>
+          <Navbar />
+        </MemoryRouter>
+      </AuthProvider>
     );
     expect(pretty(container.innerHTML)).toMatchSnapshot();
   });
 
   it('opens the mobile menu when hamburger button is clicked', () => {
     render(
-      <MemoryRouter>
-        <Navbar />
-      </MemoryRouter>
+      <AuthProvider>
+        <MemoryRouter>
+          <Navbar />
+        </MemoryRouter>
+      </AuthProvider>
     );
 
     expect(() => {
@@ -59,12 +66,14 @@ describe('<Navbar>', () => {
     const onClick = jest.fn();
 
     render(
-      <MemoryRouter>
-        <button type="button" onClick={onClick}>
-          Outside
-        </button>
-        <Navbar />
-      </MemoryRouter>
+      <AuthProvider>
+        <MemoryRouter>
+          <button type="button" onClick={onClick}>
+            Outside
+          </button>
+          <Navbar />
+        </MemoryRouter>
+      </AuthProvider>
     );
 
     const hamburger = screen.getByTestId('hamburger');

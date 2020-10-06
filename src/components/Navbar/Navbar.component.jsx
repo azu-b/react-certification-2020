@@ -1,30 +1,69 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { useAuth } from '../../state';
 import useOutsideClick from '../../utils/hooks/useOutsideClick';
 import SearchBar from '../SearchBar';
-import { Container, Menu, MenuItem, OpenMenu, HamburgerButton } from './Navbar.styled';
+import {
+  Container,
+  Menu,
+  MenuItem,
+  OpenMenu,
+  HamburgerButton,
+  Welcome,
+} from './Navbar.styled';
 import { HamburgerIcon } from '../../icons';
 
 const Navbar = () => {
   const openMenuRef = useRef();
   const [isOpen, setOpen] = useState(false);
+  const history = useHistory();
+  const { authenticated, user, logout } = useAuth();
 
   const toggleMenu = () => {
     setOpen(!isOpen);
   };
 
-  const menuItems = [
-    { name: 'Home', link: '/' },
-    { name: 'Log In', link: '/login' },
-  ];
+  const logOut = (event) => {
+    event.preventDefault();
+    setOpen(false);
+    logout();
+    history.push('/');
+  };
+
+  const isLogin = authenticated
+    ? [
+        {
+          name: 'Favorites',
+          link: '/favorites',
+        },
+        {
+          name: 'Log Out',
+          link: '/',
+          onClick: logOut,
+        },
+      ]
+    : [
+        {
+          name: 'Log In',
+          link: '/login',
+        },
+      ];
+
+  const menuItems = [{ name: 'Home', link: '/' }].concat(isLogin);
+
+  const welcomeUser = authenticated && user && user.name && (
+    <Welcome>Hello {user.name}!</Welcome>
+  );
 
   const mobileMenu = (
     <OpenMenu data-testid="mobile-menu" ref={openMenuRef}>
-      {menuItems.map(({ name, link }, index) => {
+      {welcomeUser}
+      {menuItems.map((item, index) => {
+        const { name, link, onClick = toggleMenu } = item;
         return (
           <MenuItem key={index}>
-            <Link to={link} onClick={toggleMenu}>
+            <Link to={link} onClick={onClick}>
               {name}
             </Link>
           </MenuItem>
@@ -35,10 +74,14 @@ const Navbar = () => {
 
   const tabletMenu = (
     <Menu data-testid="menu">
-      {menuItems.map(({ name, link }, index) => {
+      {welcomeUser}
+      {menuItems.map((item, index) => {
+        const { name, link, onClick = () => {} } = item;
         return (
           <MenuItem key={index}>
-            <Link to={link}>{name}</Link>
+            <Link to={link} onClick={onClick}>
+              {name}
+            </Link>
           </MenuItem>
         );
       })}

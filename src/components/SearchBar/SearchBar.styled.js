@@ -8,10 +8,6 @@ const SearchInput = styled.input`
   padding: 0 5px;
   border: none;
   box-shadow: inset 0px 0px 11px -4px #9d80ff;
-
-  @media (min-width: 768px) {
-    width: 250px;
-  }
 `;
 
 const Container = styled.form`
@@ -19,10 +15,6 @@ const Container = styled.form`
   justify-content: space-between;
   align-items: center;
   width: 230px;
-
-  @media (min-width: 768px) {
-    width: 280px;
-  }
 `;
 
 const SearchButton = styled.button`
