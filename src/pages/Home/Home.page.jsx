@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import SearchContext from '../../state/SearchContext';
 import SearchResults from '../../components/SearchResults';
 import { Container, Title, Load, Error } from './Home.styled';
 import { homeTitle, buildTitle } from '../../utils/pagesTitles';
@@ -7,6 +8,7 @@ import YouTubeAPI from '../../utils/youtube';
 import { cleanYouTubeResponse } from '../../utils/helpers';
 
 const Home = () => {
+  const { searchTerm } = useContext(SearchContext);
   const [videos, setVideos] = useState(undefined);
   const [isLoading, setLoading] = useState(true);
 
@@ -17,7 +19,7 @@ const Home = () => {
       try {
         const response = await YouTubeAPI.get('/search', {
           params: {
-            q: 'cats',
+            q: searchTerm,
             type: 'video',
             maxResults: 30,
           },
@@ -32,7 +34,7 @@ const Home = () => {
     };
 
     getSearchResults();
-  }, []);
+  }, [searchTerm]);
 
   return (
     <Container>

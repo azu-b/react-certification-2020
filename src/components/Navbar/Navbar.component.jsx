@@ -1,16 +1,9 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import useOutsideClick from '../../utils/hooks/useOutsideClick';
-import {
-  Container,
-  SearchContainer,
-  SearchBar,
-  Menu,
-  MenuItem,
-  OpenMenu,
-  HamburgerButton,
-} from './Navbar.styled';
-import { HamburgerIcon, SearchIcon } from '../../icons';
+import SearchBar from '../SearchBar';
+import { Container, Menu, MenuItem, OpenMenu, HamburgerButton } from './Navbar.styled';
+import { HamburgerIcon } from '../../icons';
 
 const Navbar = () => {
   const openMenuRef = useRef();
@@ -47,10 +40,7 @@ const Navbar = () => {
           <HamburgerIcon />
         </HamburgerButton>
         <Menu data-testid="menu">{menuItems}</Menu>
-        <SearchContainer data-testid="search">
-          <SearchBar />
-          <SearchIcon />
-        </SearchContainer>
+        <SearchBar data-testid="search" />
       </Container>
     </>
   );
